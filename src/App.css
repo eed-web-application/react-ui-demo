@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  overflow: hidden;
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 4rem;
+  color: #61dafb; /* This is the color it will start with and return to */
+  text-shadow: 2px 2px 4px #000;
+  /* Removed opacity and transform properties to avoid initial fade effect */
+  animation: rainbowPass 4s ease-in-out forwards; /* Only rainbowPass animation is applied */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Temporarily set for the animation effect */
+}
+
+@keyframes rainbowPass {
+  0%, 100% {
+    color: #61dafb; /* Ensure it starts and ends with this color */
+    background-image: none;
+  }
+  50% {
+    color: transparent;
+    background-image: linear-gradient(90deg, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+    background-size: 300% 100%;
+    background-position: 100% center;
+  }
+}
