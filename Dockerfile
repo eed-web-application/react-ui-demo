@@ -1,5 +1,5 @@
 # Step 1: Build the React application
-FROM node:latest as build-stage
+FROM node:21 as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
